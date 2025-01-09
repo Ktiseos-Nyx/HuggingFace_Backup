@@ -1,18 +1,20 @@
-# 🚀 Hugging Face Uploader Notebook
+# 🚀 Hugging Face Uploader: Streamline Your Model Sharing! 🚀
 
-This notebook provides a user-friendly tool for uploading files directly to your Hugging Face repositories. It's designed to streamline your workflow and make sharing your models and data easier.
+This tool provides a user-friendly way to upload files directly to your Hugging Face repositories. Whether you prefer the interactive environment of a Jupyter Notebook or the command-line efficiency of a Python script, we've got you covered. We've designed it to streamline your workflow and make sharing your models, datasets, and spaces easier than ever before!
+
 ------
-**🔑 Badges**
+
+**🔑 Quick Access Badges**
 
 Coded With Help From:
 
-![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white) 
+[![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)](https://gemini.google.com/)
 
 Languages:
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
 
-Huggingface Option:
+Hugging Face Option:
 
 [![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-xl-dark.svg)](https://huggingface.co/Duskfallcrew/Huggingface_Backup)
 
@@ -21,62 +23,131 @@ Always check Github updates:
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duskfallcrew/HuggingFace_Backup)
 
 ------
-Open In Colab:
 
- <a target="_blank" href="https://colab.research.google.com/github/duskfallcrew/HuggingFace_Backup/blob/Huggingface_Backup/HuggingFace_Backup_2024_Colab.ipynb">
+## 💻 Jupyter Notebook Edition: Interactive and User-Friendly
+
+For an interactive, visual, and user-friendly experience, use our Jupyter Notebook edition! You can open it directly in Google Colab with this button:
+
+<a target="_blank" href="https://colab.research.google.com/github/duskfallcrew/HuggingFace_Backup/blob/Huggingface_Backup/HuggingFace_Backup_2024_Colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a> <br/>
 
-------
+<br/>
 
-**🔑 Initial Setup (One Time Only)**
+**🔑 One-Time Setup for Jupyter Users**
 
-1.  **Authenticate:**
-    *   Run the `notebook_login()` cell *once* to securely store your Hugging Face API token.
-    *   **Important:** For security, avoid sharing your notebook file or system state after you have run `notebook_login()`. Do not commit your notebook file to a shared repository, as this could expose your API token.
+1.  **How To Get Your Huggingface API Token:**
 
-**🗂️ Using the Uploader**
+    *   Go to the [Hugging Face settings page](https://huggingface.co/settings/tokens).
+    *   Click on "New token."
+    *   Give your token a descriptive name (e.g., "My Uploader Token").
+    *   Select the appropriate role/permissions for your token. If you plan to upload files, it must have "write" permissions.
+    *   Click "Generate token."
+    *   **Copy the generated API token to a safe place.** You will need it to authenticate, and it will only be shown to you once. If you lose it, you must generate a new token.
+
+2.  **Authentication:** After you have generated an API token, run the `notebook_login()` cell *once* at the start of the notebook to securely store your Hugging Face API token.
+    *   **Important Security Note:** For security, avoid sharing your notebook file or system state after you have run `notebook_login()`. Do not commit your notebook file to a shared repository, as this could expose your API token. This is particularly important if you are sharing a notebook file, or using an online system such as Google Colab, or similar. It is recommended that you generate a new token if you suspect your token has been exposed.
+
+**🗂️ Using the Uploader Widget in the Jupyter Notebook**
 
 1.  **Repository Details:**
-    *   Enter your Hugging Face Organization or Username in the "Owner" field.
-    *   Enter your repository name in the "Repo" field.
+    *   **Owner:** Enter your Hugging Face Organization or Username in the "Owner" field. This is the name that appears in the URL of your repository.
+    *   **Repo:** Enter your repository name in the "Repo" field. This is the name of the repository you want to upload to.
+        *  Make sure these names are correct, or the tool will fail to upload.
+    * **Repo Type:** Select the type of repository from the "Repo Type" dropdown. Your options are "model", "dataset", and "space".
+    * **Subfolder:** *(Optional)* If you want to upload your files to a specific pre-existing subfolder within your repository, enter the folder name in the "Subfolder" field. Otherwise, files will be uploaded directly to the root.
 
 2.  **Directory Selection:**
-    *   Enter a directory path where your files are located.
-    *   Select the 'Update Dir' button to set that path.
+    *   **Path:** Enter the full path to the directory on your local machine where your files are located into the "Path" field.
+    *   **Update Dir:** Click the '🔄 Update Dir' button to set that path and refresh the list of files in the file selector. This will update the list of files based on the selected file type.
+    *  If no files appear after selecting "Update Dir", make sure the path is correct, and the file type is correct.
 
 3.  **File Selection:**
-    *   Select the appropriate file type from the dropdown menu.
-    *   Select the files you want to upload from the list. You can sort them by name or date modified.
+    *   **File Type:** Select the appropriate file type from the dropdown menu (e.g., `safetensors`, `png`, `txt`). This will show all the files of that type within the directory you selected above.
+    *   **File List:** Choose the files you want to upload from the list of files. You can sort the list by name or date modified using the "Sort By" dropdown.
 
-4.  **Commit Message (Optional):**
-    *   Add a commit message to your upload, or use the default message.
+4.  **Commit Message:**
+    *   **(Optional)**: If you would like to add a specific message to the commit, enter that in the "Message" field. If you leave this field blank the default message will be used instead: "Uploaded with Earth & Dusk Huggingface 🤗 Backup".
 
 5.  **Upload Options:**
-    *   Choose whether to create a pull request or upload directly to the main branch.
-    *   Select whether to clear the output after a successful upload.
+    *   **Create Pull Request:** Select the "Create Pull Request" checkbox to upload the changes as a pull request. If this box is left unchecked the changes will be uploaded directly to your repo (main branch).
+    *  **Clear output after upload:** Select this box if you would like the output area to be cleared after a successful upload.
 
 6.  **Start Upload:**
-    *   Click the "⬆️ Upload" button.
+    *   Click the '⬆️ Upload' button to begin the upload process.
+    * The current uploading file will be shown below the progress bar.
+    * A progress percentage will be displayed below this.
 
-**💡 Important Notes**
+**💡 Important Notes for Jupyter Users**
 
-*   **Direct Uploads:** This uploader uses the Hugging Face API for direct file uploads, bypassing the need for traditional Git operations for core functionality.
-*   **Git LFS:** Most users will not need to interact with Git or Git LFS. If you need to clone or push changes to a repository *outside this notebook*, it requires a separate Git credential setup (e.g., your operating system's credential manager or SSH keys). This credential is separate from the API token used in the uploader, and should not be stored in this notebook.
-*   **Troubleshooting:** If you encounter any issues, please review the steps or double-check that you have write access to the repository, and that your API token has the correct scope of access.
+*   **Direct Uploads:** This uploader uses the Hugging Face API for direct file uploads, bypassing traditional Git operations for core functionality. Therefore, you won't need to use command line Git.
+*   **Git LFS:** You do not need to use Git LFS for this tool to function. If you need to clone or push changes to a repository *outside this notebook*, it requires a separate Git credential setup, this credential is separate from your API token and should not be stored in the notebook.
+*   **Subfolders**: The tool will create subfolders in your repo based on the folder structure of your files when you upload them, or the folder you specified in the "Subfolder" field.
+*   **Troubleshooting:** If you encounter any issues, please review the steps, double-check that you have write access to the repository, and that your API token has the correct scope of access. Make sure that the file path and file types are correct.
 
-**📣 Updates & Community**
+<br/>
+
+## 🐍 Python Script Edition: Command-Line Power
+
+For those who prefer a command-line interface, we've provided a versatile Python script.
+
+**🔑 Initial Setup for Python Script Users**
+
+1.  **How To Get Your Huggingface API Token:**
+        * Go to the [Hugging Face settings page](https://huggingface.co/settings/tokens).
+        * Click on "New token."
+        * Give your token a descriptive name (e.g., "My Uploader Token").
+        * Select the appropriate role/permissions for your token. If you plan to upload files, it must have "write" permissions.
+        * Click "Generate token."
+        * **Copy the generated API token to a safe place.** You will need it to authenticate, and it will only be shown to you once. If you lose it, you must generate a new token.
+
+2.  **Set the `HF_TOKEN` Environment Variable:** After you have generated an API token, you will need to set it to an environment variable. This is how the script authenticates.
+   * This environment variable will only last for the session you have it set. For a more permenant solution see the notes below.
+    *   **Linux/macOS:** Open your terminal and run this command, replacing `<YOUR_API_TOKEN>` with your actual API token:
+        ```bash
+        export HF_TOKEN=<YOUR_API_TOKEN>
+        ```
+    *   **Windows (Command Prompt):** Run this command:
+        ```cmd
+        set HF_TOKEN=<YOUR_API_TOKEN>
+        ```
+    *   **Windows (PowerShell):** Run this command:
+        ```powershell
+        $env:HF_TOKEN = "<YOUR_API_TOKEN>"
+        ```
+    *   **Note:** Setting environment variables this way only works for the current session. For longer-term use, you may want to use a `.env` file or add it to your shell configuration file (such as `.bashrc`, `.zshrc`, or similar) so you don't need to set it each time you use the script.
+    *   Setting it to a `.env` file might be useful. See the python dotenv library for more information on this.
+
+3.  **Run the Python script:** After setting the `HF_TOKEN` environment variable, you can now run the Python script. It assumes that the environment variable is set up, and will fail if it is not.
+     ```bash
+    python huggingface_uploader.py <hfuser> <hfrepo> <file_type> <file_location> --commit_message "<your message>" --create_pr --repo_type <repo_type> --repo_folder <repo_folder>
+    ```
+     * Please note: This tool is for direct uploading of files via the Hugging Face Hub API. It doesn't perform operations that require traditional Git interactions. You do not need Git to use the uploader, you only need the API token.
+     * **Replace Placeholders**: Replace the placeholders in angle brackets (`<>`) with the correct values:
+        * `<hfuser>`: your Hugging Face Username or Organization name
+        * `<hfrepo>`: the name of your Hugging Face Repository
+        * `<file_type>`: the file type to upload (e.g., `safetensors`, `txt`, `mp3`).
+        * `<file_location>`: the full path to the directory to search for files on your machine.
+        * `--commit_message`: (Optional) Your commit message. If not specified, will use "Uploaded with Earth & Dusk Huggingface 🤗 Backup".
+        *  `--create_pr`: (Optional) When present, a pull request will be generated. If not included the files will be directly uploaded to your repo.
+        * `--repo_type`: (Optional) The repo type (model, dataset, space). If not specified defaults to "model".
+        * `--repo_folder`: (Optional) The subfolder to upload to. If not specified, will upload to the root of the repo.
+
+<br/>
+
+## 📣 Updates & Community
 
 *   This tool will continue to be updated.
 *   For the latest patches, fixes, and community contributions, visit [https://github.com/duskfallcrew/HuggingFace_Backup](https://github.com/duskfallcrew/HuggingFace_Backup)
 
-We hope this notebook makes your Hugging Face uploads easier! If you have any questions or suggestions, please reach out.
+We hope this tool makes your Hugging Face uploads easier! If you have any questions or suggestions, please reach out.
 
 <br/>
 
 ## 🌈 About Us
 
 Heya! We're a vibrant system of 300+ alters, proudly rocking life with DID, ADHD, Autism, and CPTSD. We believe AI can be a game-changer for mental health and creativity, and we're here to explore that potential together!
+This project is handled by **Ktiseos Nyx**, the programming arm of Earth & Dusk.
 
 <br/>
 
@@ -143,8 +214,8 @@ Try the original SD Colab:
 9.  🧹 Cleaned up dependencies (bye-bye, unnecessary transformers!)
 10. ✨ Added some extra folder upload superpowers
 11. Cleaned up Colab & Updated Colab
-12. Added more concise features to the widgets-Colab is working again.
+12. Added more concise features to the widgets - Colab is working again.
 13. Gemini overhaul
-14. Added more file types to Colab, streamlined the instructions
-    
+14. Added more file types to Colab, streamlined the instructions, and added command-line functionality.
+
 Remember: We're not pro programmers, and that's totally okay! If you see something that could be better, pull requests are always welcome! 🎉
