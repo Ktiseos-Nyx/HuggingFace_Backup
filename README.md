@@ -29,9 +29,9 @@ Always check Github updates:
 
 For an interactive, visual, and user-friendly experience, use our Jupyter Notebook edition! You can open it directly in Google Colab with this button:
 
-<a target="_blank" href="https://colab.research.google.com/github/duskfallcrew/HuggingFace_Backup/blob/Huggingface_Backup/HuggingFace_Backup_2024_Colab.ipynb">
+<a target="_blank" href="https://colab.research.google.com/github/Ktiseos-Nyx/HuggingFace_Backup/blob/main/HuggingFace_Backup_2024_Colab.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a> <br/>
+</a>
 
 <br/>
 
