@@ -1,2 +1,18 @@
-- name: Ensure Clean Jupyter Notebooks
-  uses: ResearchSoftwareActions/EnsureCleanNotebooksAction@1.1
+name: Ensure Clean Jupyter Notebooks
+
+on:
+  push:
+    branches:
+      - main  # Or your default branch name
+      - master
+  pull_request:
+
+jobs:
+  ensure-clean-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Ensure Clean Jupyter Notebooks
+        uses: ResearchSoftwareActions/EnsureCleanNotebooksAction@1.1
