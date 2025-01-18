@@ -1,7 +1,9 @@
-[![CodeQL Advanced](https://github.com/Ktiseos-Nyx/HuggingFace_Backup/actions/workflows/codeql.yml/badge.svg)](https://github.com/Ktiseos-Nyx/HuggingFace_Backup/actions/workflows/codeql.yml)
+
 # 🚀 Hugging Face Uploader: Streamline Your Model Sharing! 🚀
 
 This tool provides a user-friendly way to upload files directly to your Hugging Face repositories. Whether you prefer the interactive environment of a Jupyter Notebook or the command-line efficiency of a Python script, we've got you covered. We've designed it to streamline your workflow and make sharing your models, datasets, and spaces easier than ever before!
+
+CodeQL only works with direct Python, and we've recently linted and are working on re-securing and redeveloping the notebooks. They ARE 100% secure overall, we're just -- not able to get the code passings for Jupyter done quite yet.
 
 ------
 
