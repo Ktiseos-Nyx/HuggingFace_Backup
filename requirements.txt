@@ -17,7 +17,7 @@ matplotlib-inline==0.1.7
 packaging==24.2
 parso==0.8.4
 pexpect==4.9.0
-prompt_toolkit==3.0.48
+prompt_toolkit==3.0.49
 ptyprocess==0.7.0
 pure_eval==0.2.3
 Pygments==2.19.1
