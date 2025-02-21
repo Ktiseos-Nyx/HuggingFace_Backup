@@ -5,7 +5,7 @@ This tool provides a user-friendly way to upload files directly to your Hugging 
 
 CodeQL only works with direct Python, and we've recently linted and are working on re-securing and redeveloping the notebooks. They ARE 100% secure overall, we're just -- not able to get the code passings for Jupyter done quite yet.
 
-[![Codacy Security Scan](https://github.com/Ktiseos-Nyx/HuggingFace_Backup/actions/workflows/codacy.yml/badge.svg)](https://github.com/Ktiseos-Nyx/HuggingFace_Backup/actions/workflows/codacy.yml)
+
 
 ------
 
