@@ -1,175 +1,139 @@
-
 # 🚀 Hugging Face Uploader: Streamline Your Model Sharing! 🚀
 
-This tool provides a user-friendly way to upload files directly to your Hugging Face repositories. Whether you prefer the interactive environment of a Jupyter Notebook or the command-line efficiency of a Python script, we've got you covered. We've designed it to streamline your workflow and make sharing your models, datasets, and spaces easier than ever before!
+[![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-xl-dark.svg)](https://huggingface.co/Duskfallcrew/Huggingface_Backup) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duskfallcrew/HuggingFace_Backup)
 
-CodeQL only works with direct Python, and we've recently linted and are working on re-securing and redeveloping the notebooks. They ARE 100% secure overall, we're just -- not able to get the code passings for Jupyter done quite yet.
+This tool provides a user-friendly way to upload files directly to your Hugging Face repositories using a Jupyter Notebook. Designed to streamline your workflow, it makes sharing your models, datasets, and spaces easier than ever!
 
+We are actively working on further development and security enhancements for the Jupyter Notebook edition.
 
+---
 
-------
+## 📝 Table of Contents
 
-**🔑 Quick Access Badges**
+*   [Key Features](#key-features)
+*   [Jupyter Notebook Edition: Interactive and User-Friendly](#-jupyter-notebook-edition-interactive-and-user-friendly)
+    *   [One-Time Setup for Jupyter Users](#one-time-setup-for-jupyter-users)
+    *   [Using the Uploader Widget in the Jupyter Notebook](#️-using-the-uploader-widget-in-the-jupyter-notebook)
+    *   [Important Notes for Jupyter Users](#💡-important-notes-for-jupyter-users)
+*   [Updates & Community](#-updates--community)
+*   [About Us](#-about-us)
+*   [Let's Connect!](#-lets-connect)
+*   [Support Our Adventures](#-support-our-adventures)
+*   [Proudly Supported By](#-proudly-supported-by)
+*   [Need Help?](#️-need-help)
+*   [Credits & Origins](#-credits--origins)
+*   [Changelog: Our Journey So Far](#-changelog-our-journey-so-far)
 
-Coded With Help From:
+---
 
-[![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)](https://gemini.google.com/)
+## Key Features
 
-Languages:
+| Feature                       | Badge/Link                                                                                                                                                                                                                                                            | Description                                                                                               |
+| :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| **Coded With Help From**      | [![Google Gemini](https://img.shields.io/badge/google%20gemini-8E75B2?style=for-the-badge&logo=google%20gemini&logoColor=white)](https://gemini.google.com/)                                                                                                | Acknowledgment of AI assistance in development.                                                          |
+| **Language**                  | [![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)                                                                                                                                | Developed primarily in Python.                                                                         |
+| **Hugging Face Repository**   | [![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-xl-dark.svg)](https://huggingface.co/Duskfallcrew/Huggingface_Backup)                                                                                                | Link to the Hugging Face repository for the tool.                                                          |
+| **GitHub Repository**         | [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duskfallcrew/HuggingFace_Backup)                                                                                                | Link to the GitHub repository for the tool. Always check here for the latest updates.                      |
+| **Open in Google Colab**      | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ktiseos-Nyx/HuggingFace_Backup/blob/main/HuggingFace_Backup_2024_Colab.ipynb)                                                              | Directly open and run the Jupyter Notebook in Google Colab.                                                |
 
-[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
-
-Hugging Face Option:
-
-[![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-xl-dark.svg)](https://huggingface.co/Duskfallcrew/Huggingface_Backup)
-
-Always check Github updates:
-
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duskfallcrew/HuggingFace_Backup)
-
-------
+---
 
 ## 💻 Jupyter Notebook Edition: Interactive and User-Friendly
 
-For an interactive, visual, and user-friendly experience, use our Jupyter Notebook edition! You can open it directly in Google Colab with this button:
+For an interactive and visually intuitive experience, use our Jupyter Notebook edition. Open it directly in Google Colab with the button above or this link:
 
-<a target="_blank" href="https://colab.research.google.com/github/Ktiseos-Nyx/HuggingFace_Backup/blob/main/HuggingFace_Backup_2024_Colab.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
+[Open in Google Colab](https://colab.research.google.com/github/Ktiseos-Nyx/HuggingFace_Backup/blob/main/HuggingFace_Backup_2024_Colab.ipynb)
 
 <br/>
 
-**🔑 One-Time Setup for Jupyter Users**
+### One-Time Setup for Jupyter Users
 
 1.  **How To Get Your Huggingface API Token:**
 
-    *   Go to the [Hugging Face settings page](https://huggingface.co/settings/tokens).
-    *   Click on "New token."
-    *   Give your token a descriptive name (e.g., "My Uploader Token").
-    *   Select the appropriate role/permissions for your token. If you plan to upload files, it must have "write" permissions.
+    *   Navigate to your [Hugging Face settings page](https://huggingface.co/settings/tokens).
+    *   Click "New token."
+    *   Provide a descriptive name for your token (e.g., "Uploader Token").
+    *   Select the appropriate role and permissions. For uploading files, ensure it has "write" permissions.
     *   Click "Generate token."
-    *   **Copy the generated API token to a safe place.** You will need it to authenticate, and it will only be shown to you once. If you lose it, you must generate a new token.
+    *   **Securely copy the generated API token.** This token is essential for authentication and will only be displayed once. If lost, you will need to generate a new one.
 
-2.  **Authentication:** After you have generated an API token, run the `notebook_login()` cell *once* at the start of the notebook to securely store your Hugging Face API token.
-    *   **Important Security Note:** For security, avoid sharing your notebook file or system state after you have run `notebook_login()`. Do not commit your notebook file to a shared repository, as this could expose your API token. This is particularly important if you are sharing a notebook file, or using an online system such as Google Colab, or similar. It is recommended that you generate a new token if you suspect your token has been exposed.
+2.  **Authentication:**  After generating your API token, execute the `notebook_login()` cell *once* at the beginning of the notebook. This securely stores your Hugging Face API token for the session.
 
-**🗂️ Using the Uploader Widget in the Jupyter Notebook**
+    *   **Important Security Note:** To maintain the security of your API token, avoid sharing the notebook file or system state after running `notebook_login()`. **Do not commit the notebook to public repositories**, especially if using platforms like Google Colab. If you suspect your token has been compromised, generate a new one immediately.
+
+### 🗂️ Using the Uploader Widget in the Jupyter Notebook
 
 1.  **Repository Details:**
-    *   **Owner:** Enter your Hugging Face Organization or Username in the "Owner" field. This is the name that appears in the URL of your repository.
-    *   **Repo:** Enter your repository name in the "Repo" field. This is the name of the repository you want to upload to.
-        *  Make sure these names are correct, or the tool will fail to upload.
-    * **Repo Type:** Select the type of repository from the "Repo Type" dropdown. Your options are "model", "dataset", and "space".
-    * **Subfolder:** *(Optional)* If you want to upload your files to a specific pre-existing subfolder within your repository, enter the folder name in the "Subfolder" field. Otherwise, files will be uploaded directly to the root.
+    *   **Owner:** Enter your Hugging Face Organization or Username. This is the name found in your repository URL.
+    *   **Repo:** Enter the name of the repository you wish to upload to.
+        *   Ensure both "Owner" and "Repo" names are accurate to prevent upload failures.
+    *   **Repo Type:** Select the repository type from the dropdown menu: "model," "dataset," or "space."
+    *   **Subfolder:** (Optional) To upload files to a specific subfolder within your repository, enter the subfolder name. If left blank, files will be uploaded to the repository root.
 
 2.  **Directory Selection:**
-    *   **Path:** Enter the full path to the directory on your local machine where your files are located into the "Path" field.
-    *   **Update Dir:** Click the '🔄 Update Dir' button to set that path and refresh the list of files in the file selector. This will update the list of files based on the selected file type.
-    *  If no files appear after selecting "Update Dir", make sure the path is correct, and the file type is correct.
+    *   **Path:** Enter the full path to the local directory containing the files you want to upload.
+    *   **Update Dir:** Click '🔄 Update Dir' to set the path and refresh the file list based on the selected file type.
+        *   If no files appear, verify that the path and selected file type are correct.
 
 3.  **File Selection:**
-    *   **File Type:** Select the appropriate file type from the dropdown menu (e.g., `safetensors`, `png`, `txt`). This will show all the files of that type within the directory you selected above.
-    *   **File List:** Choose the files you want to upload from the list of files. You can sort the list by name or date modified using the "Sort By" dropdown.
+    *   **File Type:** Choose the appropriate file type from the dropdown (e.g., `safetensors`, `png`, `txt`). This will display all files of that type within the specified directory.
+    *   **File List:** Select the files for upload from the displayed list. Use the "Sort By" dropdown to organize files by name or modification date.
 
 4.  **Commit Message:**
-    *   **(Optional)**: If you would like to add a specific message to the commit, enter that in the "Message" field. If you leave this field blank the default message will be used instead: "Uploaded with Earth & Dusk Huggingface 🤗 Backup".
+    *   **(Optional):** Add a specific message for the commit in the "Message" field. If left empty, a default message "Uploaded with Earth & Dusk Huggingface 🤗 Backup" will be used.
 
 5.  **Upload Options:**
-    *   **Create Pull Request:** Select the "Create Pull Request" checkbox to upload the changes as a pull request. If this box is left unchecked the changes will be uploaded directly to your repo (main branch).
-    *  **Clear output after upload:** Select this box if you would like the output area to be cleared after a successful upload.
+    *   **Create Pull Request:** Check this box to upload changes as a pull request. Unchecked, changes are directly committed to the main branch.
+    *   **Clear output after upload:** Select this option to clear the output area after a successful upload.
 
 6.  **Start Upload:**
-    *   Click the '⬆️ Upload' button to begin the upload process.
-    * The current uploading file will be shown below the progress bar.
-    * A progress percentage will be displayed below this.
+    *   Click '⬆️ Upload' to begin the upload process.
+    *   The current file being uploaded and the upload progress percentage will be displayed.
 
-**💡 Important Notes for Jupyter Users**
+### 💡 Important Notes for Jupyter Users
 
-*   **Direct Uploads:** This uploader uses the Hugging Face API for direct file uploads, bypassing traditional Git operations for core functionality. Therefore, you won't need to use command line Git.
-*   **Git LFS:** You do not need to use Git LFS for this tool to function. If you need to clone or push changes to a repository *outside this notebook*, it requires a separate Git credential setup, this credential is separate from your API token and should not be stored in the notebook.
-*   **Subfolders**: The tool will create subfolders in your repo based on the folder structure of your files when you upload them, or the folder you specified in the "Subfolder" field.
-*   **Troubleshooting:** If you encounter any issues, please review the steps, double-check that you have write access to the repository, and that your API token has the correct scope of access. Make sure that the file path and file types are correct.
-
-<br/>
-
-## 🐍 Python Script Edition: Command-Line Power
-
-For those who prefer a command-line interface, we've provided a versatile Python script.
-
-**🔑 Initial Setup for Python Script Users**
-
-1.  **How To Get Your Huggingface API Token:**
-        * Go to the [Hugging Face settings page](https://huggingface.co/settings/tokens).
-        * Click on "New token."
-        * Give your token a descriptive name (e.g., "My Uploader Token").
-        * Select the appropriate role/permissions for your token. If you plan to upload files, it must have "write" permissions.
-        * Click "Generate token."
-        * **Copy the generated API token to a safe place.** You will need it to authenticate, and it will only be shown to you once. If you lose it, you must generate a new token.
-
-2.  **Set the `HF_TOKEN` Environment Variable:** After you have generated an API token, you will need to set it to an environment variable. This is how the script authenticates.
-   * This environment variable will only last for the session you have it set. For a more permenant solution see the notes below.
-    *   **Linux/macOS:** Open your terminal and run this command, replacing `<YOUR_API_TOKEN>` with your actual API token:
-        ```bash
-        export HF_TOKEN=<YOUR_API_TOKEN>
-        ```
-    *   **Windows (Command Prompt):** Run this command:
-        ```cmd
-        set HF_TOKEN=<YOUR_API_TOKEN>
-        ```
-    *   **Windows (PowerShell):** Run this command:
-        ```powershell
-        $env:HF_TOKEN = "<YOUR_API_TOKEN>"
-        ```
-    *   **Note:** Setting environment variables this way only works for the current session. For longer-term use, you may want to use a `.env` file or add it to your shell configuration file (such as `.bashrc`, `.zshrc`, or similar) so you don't need to set it each time you use the script.
-    *   Setting it to a `.env` file might be useful. See the python dotenv library for more information on this.
-
-3.  **Run the Python script:** After setting the `HF_TOKEN` environment variable, you can now run the Python script. It assumes that the environment variable is set up, and will fail if it is not.
-     ```bash
-    python huggingface_uploader.py <hfuser> <hfrepo> <file_type> <file_location> --commit_message "<your message>" --create_pr --repo_type <repo_type> --repo_folder <repo_folder>
-    ```
-     * Please note: This tool is for direct uploading of files via the Hugging Face Hub API. It doesn't perform operations that require traditional Git interactions. You do not need Git to use the uploader, you only need the API token.
-     * **Replace Placeholders**: Replace the placeholders in angle brackets (`<>`) with the correct values:
-        * `<hfuser>`: your Hugging Face Username or Organization name
-        * `<hfrepo>`: the name of your Hugging Face Repository
-        * `<file_type>`: the file type to upload (e.g., `safetensors`, `txt`, `mp3`).
-        * `<file_location>`: the full path to the directory to search for files on your machine.
-        * `--commit_message`: (Optional) Your commit message. If not specified, will use "Uploaded with Earth & Dusk Huggingface 🤗 Backup".
-        *  `--create_pr`: (Optional) When present, a pull request will be generated. If not included the files will be directly uploaded to your repo.
-        * `--repo_type`: (Optional) The repo type (model, dataset, space). If not specified defaults to "model".
-        * `--repo_folder`: (Optional) The subfolder to upload to. If not specified, will upload to the root of the repo.
+*   **Direct Uploads:** This tool utilizes the Hugging Face API for direct file uploads, bypassing Git operations for core functionality. Command-line Git usage is not required for basic uploads.
+*   **Git LFS:** Git LFS is not necessary for using this tool.  Separate Git credentials are required for repository operations outside of this notebook (like cloning or pushing via Git) and should not be stored within the notebook.
+*   **Subfolders:** The tool will create subfolders in your repository based on your local file structure or the specified "Subfolder."
+*   **Troubleshooting:** If you encounter issues, re-verify all steps, ensure you have write access to the repository, and that your API token has the correct permissions. Double-check file paths and file types.
 
 <br/>
 
 ## 📣 Updates & Community
 
-*   This tool will continue to be updated.
-*   For the latest patches, fixes, and community contributions, visit [https://github.com/duskfallcrew/HuggingFace_Backup](https://github.com/duskfallcrew/HuggingFace_Backup)
+*   This tool is continuously updated and improved.
+*   For the latest updates, fixes, and community contributions, please visit the [GitHub repository](https://github.com/duskfallcrew/HuggingFace_Backup).
 
-We hope this tool makes your Hugging Face uploads easier! If you have any questions or suggestions, please reach out.
+We hope this tool simplifies your Hugging Face uploads! For questions or suggestions, please reach out.
 
 <br/>
 
 ## 🌈 About Us
 
-Heya! We're a vibrant system of 300+ alters, proudly rocking life with DID, ADHD, Autism, and CPTSD. We believe AI can be a game-changer for mental health and creativity, and we're here to explore that potential together!
-This project is handled by **Ktiseos Nyx**, the programming arm of Earth & Dusk.
+We are a diverse system of 300+ alters, navigating life with DID, ADHD, Autism, and CPTSD. We believe in the positive potential of AI for mental health and creativity and are excited to explore this intersection.
+
+This project is managed by **Ktiseos Nyx**, the programming division of Earth & Dusk.
 
 <br/>
 
 ### 🤝 Let's Connect!
 
-*   🏠 [End Media](https://www.end-media.org/)
-*   🎮 [Discord Community](https://discord.gg/5t2kYxt7An)
-*   🤗 [HuggingFace Space](https://huggingface.co/EarthnDusk)
-*   🎵 [YouTube](https://www.youtube.com/channel/UCk7MGP7nrJz5awBSP75xmVw)
-*   🎨 [DeviantArt Group](https://www.deviantart.com/diffusionai)
-*   🎪 [Subreddit](https://www.reddit.com/r/earthndusk/)
+| Platform          | Link                                        |
+| :---------------- | :------------------------------------------ |
+| **Website**       | [End Media](https://www.end-media.org/)      |
+| **Discord**       | [Discord Community](https://discord.gg/5t2kYxt7An) |
+| **Hugging Face**  | [HuggingFace Space](https://huggingface.co/EarthnDusk) |
+| **YouTube**       | [YouTube Channel](https://www.youtube.com/channel/UCk7MGP7nrJz5awBSP75xmVw) |
+| **DeviantArt**    | [DeviantArt Group](https://www.deviantart.com/diffusionai) |
+| **Subreddit**     | [Subreddit](https://www.reddit.com/r/earthndusk/)    |
 
 <br/>
 
 ### ☕ Support Our Adventures
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z8L4EO)
+
+You can support our work and future development through Ko-fi.
 
 <br/>
 
@@ -182,45 +146,42 @@ This project is handled by **Ktiseos Nyx**, the programming arm of Earth & Dusk.
 
 ## 🛠️ Need Help?
 
-Found a bug? We've got multiple ways to help:
+If you encounter a bug or need assistance, please reach out through:
 
-*   GitHub PR & Bug tracker
-*   CivitAi DM/comments
+*   GitHub Pull Requests & Bug Tracker
+*   CivitAi Direct Messages/Comments
 *   Earth & Dusk Discord
 
 <br/>
 
 ## 💝 Credits & Origins
 
-Big thanks to our code ancestors:
+We extend our sincere gratitude to the original creators and contributors who laid the foundation for this project:
 
-*   EVERYDREAM2 TRAINER [https://github.com/victorchall/EveryDream2trainer](https://github.com/victorchall/EveryDream2trainer)
+*   EVERYDREAM2 TRAINER: [https://github.com/victorchall/EveryDream2trainer](https://github.com/victorchall/EveryDream2trainer)
 *   LINAQRUF
-*   NOCRYPT [![](https://dcbadge.vercel.app/api/shield/442099748669751297?style=flat)](https://lookup.guru/442099748669751297)
+*   NOCRYPT: [![](https://dcbadge.vercel.app/api/shield/442099748669751297?style=flat)](https://lookup.guru/442099748669751297)
 
-Try the original SD Colab:
+Explore the original Stable Diffusion Colab notebook:
 
-<a target="_blank" href="https://colab.research.google.com/drive/1wEa-tS10h4LlDykd87TF5zzpXIIQoCmq">
-<img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
+[Open Original SD Colab](https://colab.research.google.com/drive/1wEa-tS10h4LlDykd87TF5zzpXIIQoCmq)
 <br/>
 
 ## 📝 Changelog: Our Journey So Far
 
-1.  🔧 Added EveryDream2Trainer's Python widget magic
-2.  🌟 Kept Nocrypt's awesome contributions front and center
-3.  📦 Packed all the essentials into one Jupyter notebook
-4.  🤓 Made friends with proper file extensions (*.safetensors)
-5.  📝 Wrote instructions in human-friendly language
-6.  🤖 Got GPT to help make things clearer
-7.  🎨 Prettied up the Jupyter edition
-8.  🔄 Synced up Colab and Jupyter versions
-9.  🧹 Cleaned up dependencies (bye-bye, unnecessary transformers!)
-10. ✨ Added some extra folder upload superpowers
-11. Cleaned up Colab & Updated Colab
-12. Added more concise features to the widgets - Colab is working again.
-13. Gemini overhaul
-14. Added more file types to Colab, streamlined the instructions, and added command-line functionality.
+1.  **🔧 Enhanced with EveryDream2Trainer's Python widget integration.**
+2.  **🌟 Maintained and highlighted Nocrypt's valuable contributions.**
+3.  **📦 Integrated essential functionalities into a single Jupyter Notebook.**
+4.  **🤓 Improved file handling with proper file extensions (*.safetensors).**
+5.  **📝 Created user-friendly and accessible instructions.**
+6.  **🤖 Utilized GPT assistance to enhance clarity and readability.**
+7.  **🎨 Improved the visual presentation of the Jupyter Notebook edition.**
+8.  **🔄 Synchronized Colab and Jupyter Notebook versions for consistency.**
+9.  **🧹 Optimized dependencies by removing unnecessary transformers.**
+10. **✨ Added advanced folder upload capabilities.**
+11. **🔄 Refined and updated the Colab notebook for improved performance.**
+12. **🚀 Implemented more concise widget features and restored Colab functionality.**
+13. **💎 Underwent a Gemini-assisted overhaul for improved quality.**
+14. **➕ Expanded supported file types in Colab, streamlined instructions, and introduced command-line functionality (Note: Command-line section removed as per request).**
 
-Remember: We're not pro programmers, and that's totally okay! If you see something that could be better, pull requests are always welcome! 🎉
+We acknowledge that we are not professional programmers, and appreciate community contributions. Pull requests are always welcome for improvements! 🎉
