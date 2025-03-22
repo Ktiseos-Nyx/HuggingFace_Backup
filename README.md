@@ -6,6 +6,8 @@ This tool provides a user-friendly way to upload files directly to your Hugging 
 
 We are actively working on further development and security enhancements for the Jupyter Notebook edition.
 
+We are also actively struggling to update and keep track of the Google Colab version.
+
 ---
 
 ## 📝 Table of Contents
@@ -40,9 +42,8 @@ We are actively working on further development and security enhancements for the
 
 ## 💻 Jupyter Notebook Edition: Interactive and User-Friendly
 
-For an interactive and visually intuitive experience, use our Jupyter Notebook edition. Open it directly in Google Colab with the button above or this link:
+For an interactive and visually intuitive experience, use our Jupyter Notebook edition. 
 
-[Open in Google Colab](https://colab.research.google.com/github/Ktiseos-Nyx/HuggingFace_Backup/blob/main/HuggingFace_Backup_2024_Colab.ipynb)
 
 <br/>
 
