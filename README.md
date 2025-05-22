@@ -1,4 +1,4 @@
-# 🚀 Hugging Face Uploader: Streamline Your Model Sharing! 🚀
+# 🚀  <a href="https://emoji.gg/sticker/72567-doro"><img src="https://cdn3.emoji.gg/stickers/72567-doro.png" width="32px" height="32px" alt="Doro"></a> Hugging Face Uploader: Streamline Your Model Sharing! 🚀
 
 [![Model on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-xl-dark.svg)](https://huggingface.co/Duskfallcrew/Huggingface_Backup) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/duskfallcrew/HuggingFace_Backup)
 
