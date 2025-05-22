@@ -10,6 +10,7 @@ We are also actively struggling to update and keep track of the Google Colab ver
 
 > 2025 'EXTRA' is the version with the extra cell to zip up images or files before uploading to huggingface.  March 2025 has minor adjustments to environment code.
 > Dataset Zipper is a standalone zip & download function notebook, which it's  cell is in the 'extra' notebook as well.
+> The folder structure is much nicer now, and the May 2025 one NOW HAS added hf transfer for better serverside uploads 
 
 ---
 
